@@ -8,7 +8,7 @@ const db = new sqlite3.Database('articles.db');
 const exphbs = require('express-handlebars');
 require('dotenv').config();
 const moment = require('moment')
-
+const PORT = process.env.PORT || 3000;
 app.use(express.static('static_files'));
 app.engine('handlebars', exphbs({
   defaultLayout: 'main',
@@ -178,6 +178,6 @@ app.delete('/archive', (req, res) => {
 
 
 
-app.listen(3000, () => {
+app.listen(PORT, () => {
   console.log('Server started at http://localhost:3000/')
 })
