@@ -4,7 +4,15 @@ nav{
 }
 
 #navbarText {
-  color: white;
+  color: #d8bb3f;
+}
+
+.navbar-brand{
+  color:#d8bb3f;
+}
+
+.nav-link{
+  color:#d8bb3f;
 }
 
 .articleContent{
@@ -26,7 +34,7 @@ nav{
 
 body{
  /* font-family: 'Open Sans', sans-serif; */
-  background-color: #ebe7c7;
+  background-color: #d8bb3f;
   font-family: 'Merriweather Sans', sans-serif;
 }
 
@@ -234,19 +242,20 @@ body {
 }
 
 #floating_dict{
-  left:-5em;
-  bottom:100px;
+  left:10px;
+  top:35vw;
   position: fixed;
   z-index: 1;
-  text-align: center;
+  text-align: left;
 }
 
 #article-dict{
-  left: 160px;
+  left: 60px;
   bottom: 85px;
   position: relative;
   z-index: 1;
   text-align: center;
+
 }
 
 #floating_dictheader{
@@ -255,11 +264,17 @@ body {
 }
 
 .fa-book{
-  font-size: 3.2em;
+  font-size: 60px;
   color: #800020;
 }
 .amPNG {
-  width: 320px;
+  width: 60vw;
+}
+
+@media (min-width: 992px) {
+  .amPNG {
+    width: 300px;
+  }
 }
 
 .collapseBorder {
@@ -295,6 +310,7 @@ margin-bottom: 0.8em;
 #dict-button {
   border-color: #ffffff;
   color: white;
+  background-color: #343a40;
 }
 
 #dict-button:hover {

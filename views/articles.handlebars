@@ -1,13 +1,13 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="font-family: 'Merriweather Sans', sans-serif;">
-  <a class="navbar-brand" href="/"> <img src='/newspaper.png' width="30" height="30" class="d-inline-block align-top"
-      alt="" style="font-family: 'Noto Sans HK', sans-serif;"> Send News </a>
+  <a class="navbar-brand" href="/" style="color:#d8bb3f;"> NewsBee <img src='/brand.png' width="37" height="25" class="d-inline-block align-top"
+      alt="" style="font-family: 'Noto Sans HK', sans-serif;"> </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
     aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarText">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
+      <li class="nav-item">
         <a class="nav-link" href="/">Home/主页 <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
@@ -60,14 +60,14 @@
 
 
 <div id="test" class="on_Location">
-  <button type="button" class="btn btn-secondary" onclick="on()">Change<br />Location</button>
+  <button type="button" class="btn btn-secondary" style="background-color: #343a40;" onclick="on()">Change<br />Location</button>
 </div>
 
 {{!-- make it draggable --}} 
 <div id="floating_dict">
-  <a type="button" id="toggle-floating-dict"><i class="fas fa-book"></i></a><p id="floating_dictheader"><strong>DICT</strong></p>
+  <a type="button" id="toggle-floating-dict"><i class="fas fa-book"></i></a><p id="floating_dictheader"><strong>Translate</strong></p>
   <form class="form-inline invisible" id="article-dict">
-      <input class="form-control" style="width: 40%;" type="text" id='dict-box' placeholder="translate.."
+      <input class="form-control" style="width: 70%; color:white;background-color: #343a40;" type="text" id='dict-box' placeholder="enter text..."
         aria-label="Search">
       <button class="btn btn-secondary" data-toggle="modal" data-target="#dictModal" id="dict-button"
         type="submit"><i class="fas fa-search"></i></button>
@@ -81,7 +81,7 @@
     {{#each articles}}
     <div class="item">
       <div class="container topbar"><div class='row justify-content-between'>
-        <div class='col'><h6 id="date{{@index}}" class="datetext">{{this.publishTime}} </h6></div>
+        <div class='col' style="padding-left:0px;"><h6 id="date{{@index}}" class="datetext">{{this.publishTime}} </h6></div>
         <div class='col'><button class="save-btn linkbutton" id="btn{{@index}}" type="button" data-toggle="collapse"
           data-target="#collapseExample{{@index}}" aria-expanded="false" aria-controls="collapseExample"> Save Article
         </button></div>
@@ -97,9 +97,11 @@
         Read Article
       </button></div>
       <div class="collapse" id="collapseExample{{@index}}">
-        <p class='card topBorder' id="content{{@index}}"> {{this.content}} </p>
+        <p class='card topBorder' id="content{{@index}}" style="padding:5px;"> {{this.content}} </p>
         <p class='card collapseBorder' id="translate{{@index}}"></p>
-        <a class ='collapseBorder'id="urltext{{@index}}" href= "{{this.url}}" target="_blank">{{this.url}}</a> 
+        <p style="max-height: 20px; overflow:hidden;">
+        <a class ='collapseBorder'id="urltext{{@index}}" href= "{{this.url}}" target="_blank">{{this.url}}</a>
+        </p>
       </div>
     </div>
     {{/each}}
